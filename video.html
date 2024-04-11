@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoCAD Training - Video Player</title>
+</head>
+<body>
+    <header>
+        <h1>AutoCAD Training</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="video-player">
+            <h2>Video Player</h2>
+            <video controls autoplay>
+                <source src="" type="video/mp4" id="video-source">
+                Your browser does not support the video tag.
+            </video>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 AutoCAD Training</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+    <script>
+        // JavaScript for setting video source dynamically
+        const params = new URLSearchParams(window.location.search);
+        const videoUrl = params.get("videoUrl");
+        document.getElementById("video-source").src = decodeURIComponent(videoUrl);
+    </script>
+</body>
+</html>
